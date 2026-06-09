@@ -6,7 +6,6 @@ body {
 .page-title {
   font-size: 70px;
   font-weight: 400;
-  color: #515076;
   text-align: center;
 }
 
@@ -40,11 +39,7 @@ body {
   margin-top: 30px;
 }
 
-.product-wrapper h2{
-  color: #515076;
-}
-
-.product-wrapper ul {
+.product-composition {
   line-height: 1.6;
 }
 
