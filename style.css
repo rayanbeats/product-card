@@ -43,6 +43,7 @@ body {
   text-align: center;
 }
 
+
 .container__products-list {
   display: flex;
   max-width: 1280px;
@@ -50,8 +51,32 @@ body {
   gap: 45px;
   list-style: none;
   justify-content: center;
-
   padding-top: 110px;
+}
+
+.button-group {
+  width: 1110px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.edit-cards-button {
+  background-color: #e4e2f7;
+  width: 300px;
+  color: #6f6e96;
+  font-weight: 700;
+  padding: 14px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #f1f0f8;
+
+}
+
+.change-color-button {
+  background-color: #a3e7c5;
 }
 
 .product-wrapper {
@@ -106,3 +131,4 @@ body {
   font-size: 20px;
   justify-content: space-between;
 }
+
