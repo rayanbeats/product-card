@@ -1,29 +1,29 @@
 //Изменение цвета карточки товара
-const productCard = document.querySelector('.product-wrapper')
-const changeCardColorButton = document.querySelector('.button-group__change-card-color-button')
-const greenColorHash = '#a3e7c5'
-const blueColorHash = '#84848f'
+const productCard = document.querySelector('.product-wrapper');
+const CardColorButton = document.querySelector('.button-group__change-card-color-button');
+const greenColorHex = '#a3e7c5';
+const blueColorHex = '#84848f';
 
-changeCardColorButton.addEventListener('click', () => {
-  productCard.style.backgroundColor = greenColorHash
-})
+CardColorButton.addEventListener('click', () => {
+  productCard.style.backgroundColor = greenColorHex;
+});
 
 //Изменение цвета всех карточек товара
-const productCards = document.querySelectorAll('.product-wrapper')
-const changeAllCardsColorButton = document.querySelector('.button-group__change-all-cards-color-button')
+const productCards = document.querySelectorAll('.product-wrapper');
+const AllCardsColorButton = document.querySelector('.button-group__change-all-cards-color-button');
 
-changeAllCardsColorButton.addEventListener('click', () => {
-  productCards.forEach((card) => card.style.backgroundColor = blueColorHash)
-})
+AllCardsColorButton.addEventListener('click', () => {
+  productCards.forEach((card) => card.style.backgroundColor = blueColorHex);
+});
 
 //Открытие google.com в новой вкладке
-const openGoogleButton = document.querySelector('.button-group__open-google-button')
-const googleUrl = 'https://www.google.com'
+const openGoogleButton = document.querySelector('.button-group__open-google-button');
+const googleUrl = 'https://www.google.com';
 
-openGoogleButton.addEventListener('click', openGoogle)
+openGoogleButton.addEventListener('click', openGoogle);
 
 function openGoogle() {
-  const answer = window.confirm('Вы хотите открыть google.com?')
+  const answer = window.confirm('Вы хотите открыть google.com?');
   if (answer === true) {
     window.open(googleUrl)
   } 
@@ -33,33 +33,33 @@ function openGoogle() {
 }
 
 //Вывод консоль лог
-const openConsoleLogButton = document.querySelector('.button-group__open-console-log-button')
+const messageOutputButton = document.querySelector('.button-group__open-console-log-button');
 
-openConsoleLogButton.addEventListener('click', () => 
-  outputConsoleLogButton('Вы открыли консоль лог!','Сообщение выведено в консоль')
-)
+messageOutputButton.addEventListener('click', () => 
+  outputMessage('Вы открыли консоль лог!','Сообщение выведено в консоль')
+);
 
-function outputConsoleLogButton(message, alertMessage) {
-  console.log(message)
-  alert(alertMessage)
+function outputMessage(message, alertMessage) {
+  console.log(message);
+  alert(alertMessage);
 }
 
 //Выведение контента элемента заголовка в консоль
-const openPageTitleConsole = document.querySelector('.container__page-title')
+const pageTitle = document.querySelector('.container__page-title');
 
-openPageTitleConsole.addEventListener('mouseenter', () => 
-  outputConsoleLogPageTitle(openPageTitleConsole.textContent)
-)
+pageTitle.addEventListener('mouseenter', () => 
+  outputPageTitle(pageTitle.textContent)
+);
 
-function outputConsoleLogPageTitle(textContent) {
-  console.log(textContent)
+function outputPageTitle(textContent) {
+  console.log(textContent);
 }
 
 //Изменение цвета кнопки при нажатии
-const editClickColorButton = document.querySelector('.button-group__edit-self-color-button')
+const colorEditButton = document.querySelector('.button-group__edit-self-color-button');
 
-editClickColorButton.addEventListener('click', changeButtonColor)
+colorEditButton.addEventListener('click', changeButtonColor);
 
 function changeButtonColor() {
-  editClickColorButton.classList.toggle('change-color-button')
+  colorEditButton.classList.toggle('change-color-button');
 }
