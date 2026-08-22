@@ -10,7 +10,7 @@ showWeather("Санкт-Петербург", 10);
 
 const LIGHT_SPEED = 299792458;
 
-function speedType (speed) {
+function determineSpeedType (speed) {
   if (speed > LIGHT_SPEED) {
     console.log("Сверхсветовая скорость");
   } else if (speed === LIGHT_SPEED) {
@@ -20,16 +20,16 @@ function speedType (speed) {
   }
 }
 
-speedType(2997924533);
-speedType(29979245);
-speedType(299792458);
+determineSpeedType(2997924533);
+determineSpeedType(29979245);
+determineSpeedType(299792458);
 
 //Проверка бюджета на покупку
 
 let product = "Автомобиль";
 let price = 20000;
 
-function buyAccept (budget) {
+function buyProductAccept (budget) {
   if (budget >= price) {
     console.log(`${product} приобретен. Спасибо за покупку!`);
   } else {
@@ -38,12 +38,12 @@ function buyAccept (budget) {
   }
 }
 
-buyAccept(12400);
-buyAccept(20000);
+buyProductAccept(12400);
+buyProductAccept(20000);
 
 
 //Определение превышения скорости автомобиля
-function carSpeed (speed) {
+function determineCarSpeed (speed) {
   if (speed <= 40) {
     console.log(`Скорость - ${speed} км/ч. Скорость не превышена!`);
   } else {
@@ -51,8 +51,8 @@ function carSpeed (speed) {
   }
 }
 
-carSpeed(10);
-carSpeed(100);
+determineCarSpeed(10);
+determineCarSpeed(100);
 
 //3 различных переменных
 const PI = 3.14;
