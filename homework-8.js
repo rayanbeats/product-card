@@ -22,26 +22,25 @@ const car = {
 car.owner = profile;
 
 //Функция проверки наличия свойства объекта "максимальная скорость"
-function checkProperty (car) {
+function setMaxSpeed (car) {
   if ("maxSpeed" in car){
     console.log("Свойство 'maxSpeed' присутствует в объекте 'car'");
   } else {
     car.maxSpeed = 200;
     console.log("Свойство 'maxSpeed' добавлено в объект 'car'");
   }
-  return
 }
-checkProperty(car);
+setMaxSpeed(car);
 console.log(car);
 
-//Функция которая получает перым аргументом объект, а вторым - свойство, которое нужно вывести
-function checkProperty2 (car, propertyName) {
+//Функция которая получает первым аргументом объект, а вторым - свойство, которое нужно вывести
+function showPropertyValue (car, propertyName) {
   console.log(car[propertyName]);
 }
 
-checkProperty2(car, "brand");
-checkProperty2(car, "model");
-checkProperty2(car, "year");
+showPropertyValue(car, "brand");
+showPropertyValue(car, "model");
+showPropertyValue(car, "year");
 
 //Создать массив, который содержит названия продуктов (просто строки)
 const products = [
@@ -84,10 +83,8 @@ const updateProductsInfo = [...productsInfo, ...newCategory];
 console.log(`Длина массива productsInfo: ${updateProductsInfo.length} элементов`);
 
 //Добавление нового свойства продуктов - наличие на складе при условии
-const checkInStock = updateProductsInfo.map(product => {
-  return product.quantity > 0 
-    ? {...product, inStock:true}
-    : {...product, inStock:false} 
-});
+const checkInStock = updateProductsInfo.map(product => ({
+    ...product, inStock: product.quantity > 0
+}));
 
 console.log(checkInStock)
